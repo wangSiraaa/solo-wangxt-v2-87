@@ -23,3 +23,7 @@ venv/
 __pycache__/
 .pytest_cache/
 .DS_Store
+
+# Java / build output
+quota-ledger/target/
+workbench/dist/

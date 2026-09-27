@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: fishery-quota-ledger
+  datasource:
+    url: ${QUOTA_DB_URL:jdbc:postgresql://localhost:5432/quota_ledger}
+    username: ${QUOTA_DB_USER:quota}
+    password: ${QUOTA_DB_PASSWORD:quota}
+  jdbc:
+    template:
+      fetch-size: 200
+
+# Schema + fictional demo seed are applied by DatabaseInitializer (whole-script
+# execution, required for the PL/pgSQL trigger bodies in schema.sql).
+ledger:
+  demo-seed: true

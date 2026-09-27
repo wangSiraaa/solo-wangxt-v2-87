@@ -1,0 +1,20 @@
+{
+  "name": "fishery-quota-workbench",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "虚构渔业配额核对工作台 (demo only, not a real permit)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5173"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
