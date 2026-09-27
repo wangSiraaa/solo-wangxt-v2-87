@@ -1,0 +1,5 @@
+# Demo profile: post the fictional end-to-end scenario on startup.
+# Use together with a storage profile:
+#   mvn spring-boot:run -Dspring-boot.run.profiles=h2,demo
+# or with PostgreSQL:
+#   mvn spring-boot:run -Dspring-boot.run.profiles=demo

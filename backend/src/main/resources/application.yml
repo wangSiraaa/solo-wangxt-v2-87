@@ -1,0 +1,23 @@
+# Default profile: PostgreSQL quota ledger.
+# All weights are stored as NUMERIC(14,3) and handled as java.math.BigDecimal.
+spring:
+  datasource:
+    url: ${QUOTA_DB_URL:jdbc:postgresql://localhost:5432/quota_ledger}
+    username: ${QUOTA_DB_USER:quota}
+    password: ${QUOTA_DB_PASSWORD:quota}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    # The schema is owned by schema.sql (append-only ledger tables).
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  sql:
+    init:
+      mode: always
+
+server:
+  port: ${SERVER_PORT:8080}

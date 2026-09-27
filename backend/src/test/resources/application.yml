@@ -1,0 +1,14 @@
+# Tests run against H2 in PostgreSQL compatibility mode.
+spring:
+  datasource:
+    url: jdbc:h2:mem:quota_test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+  sql:
+    init:
+      mode: always
